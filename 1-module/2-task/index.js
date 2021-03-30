@@ -10,7 +10,23 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  if (name === null) {
+    return false;
+  }
+
+  if (name.length < 4) {
+    return false;
+  }
+
+  if (typeof (name) === 'undefined') {
+    return false;
+  }
+
+  if (name.split(' ').length - 1) {
+    return false;
+  }
+  
+  return true; 
 }
 
 function sayHello() {
